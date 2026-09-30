@@ -8,11 +8,26 @@
       "expected_output": "Natural developer Thai; Architecture/Backend/Frontend/Middleware/Endpoint/Deploy kept in English; code, URL, command unchanged; no padded verbs or essay opener.",
       "files": [],
       "assertions": [
-        {"text": "Preserves `Express`, the URL https://api.example.com/v2/users and the command `npm run build && npm run deploy` exactly", "type": "programmatic"},
-        {"text": "Does not translate Backend, Frontend, Middleware, Endpoint, Deploy, API into Thai", "type": "programmatic"},
-        {"text": "Does not use 'สถาปัตยกรรม' (keeps Architecture)", "type": "programmatic"},
-        {"text": "Contains none of: ดำเนินการ, ทำการ, ในส่วนของ, ปฏิเสธไม่ได้ว่า, ในยุคที่, ไม่เพียงแต่, ดังกล่าว, ทั้งนี้", "type": "programmatic"},
-        {"text": "Keeps all original facts (Express, JWT auth middleware, Frontend calls the API, fast and secure, deploy command) and adds none", "type": "manual"}
+        {
+          "text": "Preserves `Express`, the URL https://api.example.com/v2/users and the command `npm run build && npm run deploy` exactly",
+          "type": "programmatic"
+        },
+        {
+          "text": "Does not translate Backend, Frontend, Middleware, Endpoint, Deploy, API into Thai",
+          "type": "programmatic"
+        },
+        {
+          "text": "Does not use 'สถาปัตยกรรม' (keeps Architecture)",
+          "type": "programmatic"
+        },
+        {
+          "text": "Contains none of: ดำเนินการ, ทำการ, ในส่วนของ, ปฏิเสธไม่ได้ว่า, ในยุคที่, ไม่เพียงแต่, ดังกล่าว, ทั้งนี้",
+          "type": "programmatic"
+        },
+        {
+          "text": "Keeps all original facts (Express, JWT auth middleware, Frontend calls the API, fast and secure, deploy command) and adds none",
+          "type": "manual"
+        }
       ]
     },
     {
@@ -22,11 +37,26 @@
       "expected_output": "Plain Thai for non-technical customers; jargon replaced or glossed; hype and padded verbs removed; still says users need to do nothing.",
       "files": [],
       "assertions": [
-        {"text": "Does not contain the bare jargon words Request, Endpoint, Database (uses plain Thai or glossed terms)", "type": "programmatic"},
-        {"text": "Contains none of: ทำการ, ยกระดับ, อย่างแท้จริง, ในยุคดิจิทัล, ทั้งนี้", "type": "programmatic"},
-        {"text": "Still tells the customer they do not need to take any action", "type": "manual"},
-        {"text": "Keeps all original facts (architecture improved, data moved to new database, cache is checked first, better user experience) and adds none", "type": "manual"},
-        {"text": "Reads as a natural customer email, not a stiff or AI-sounding one", "type": "manual"}
+        {
+          "text": "Does not contain the bare jargon words Request, Endpoint, Database (uses plain Thai or glossed terms)",
+          "type": "programmatic"
+        },
+        {
+          "text": "Contains none of: ทำการ, ยกระดับ, อย่างแท้จริง, ในยุคดิจิทัล, ทั้งนี้",
+          "type": "programmatic"
+        },
+        {
+          "text": "Still tells the customer they do not need to take any action",
+          "type": "manual"
+        },
+        {
+          "text": "Keeps all original facts (architecture improved, data moved to new database, cache is checked first, better user experience) and adds none",
+          "type": "manual"
+        },
+        {
+          "text": "Reads as a natural customer email, not a stiff or AI-sounding one",
+          "type": "manual"
+        }
       ]
     },
     {
@@ -36,11 +66,113 @@
       "expected_output": "Concise dev-style Thai; feat: prefix, file path, version, command preserved; English terms kept; padded verbs removed.",
       "files": [],
       "assertions": [
-        {"text": "Preserves the 'feat:' prefix, `src/middleware/rateLimit.ts`, `ioredis`, 5.3.2 and `npm test -- rateLimit` exactly", "type": "programmatic"},
-        {"text": "Keeps Middleware, Bug, Cache, Dependency, Request, Queue, Redis in English", "type": "programmatic"},
-        {"text": "Contains none of: ดำเนินการ, ทำการ, ในการนี้, ทั้งนี้, ดังกล่าว", "type": "programmatic"},
-        {"text": "Keeps the markdown structure (heading and bullet list)", "type": "programmatic"},
-        {"text": "Keeps all original facts and adds none", "type": "manual"}
+        {
+          "text": "Preserves the 'feat:' prefix, `src/middleware/rateLimit.ts`, `ioredis`, 5.3.2 and `npm test -- rateLimit` exactly",
+          "type": "programmatic"
+        },
+        {
+          "text": "Keeps Middleware, Bug, Cache, Dependency, Request, Queue, Redis in English",
+          "type": "programmatic"
+        },
+        {
+          "text": "Contains none of: ดำเนินการ, ทำการ, ในการนี้, ทั้งนี้, ดังกล่าว",
+          "type": "programmatic"
+        },
+        {
+          "text": "Keeps the markdown structure (heading and bullet list)",
+          "type": "programmatic"
+        },
+        {
+          "text": "Keeps all original facts and adds none",
+          "type": "manual"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "eval_name": "long-mixed-doc",
+      "prompt": "ปรับภาษาไทยของคู่มือติดตั้งนี้ให้เป็นธรรมชาติ ผู้อ่านคือ developer:\n\n# คู่มือการติดตั้ง\n\nในยุคที่การพัฒนาซอฟต์แวร์เปลี่ยนแปลงอย่างรวดเร็ว ปฏิเสธไม่ได้ว่าเครื่องมือที่ทรงพลังช่วยยกระดับการทำงานของทีมอย่างแท้จริง คู่มือฉบับนี้จึงจะอธิบายขั้นตอนการติดตั้งระบบ\n\n## สถาปัตยกรรมของระบบ\nระบบประกอบด้วย 3 ส่วนหลัก ได้แก่ Frontend ที่พัฒนาด้วย `Next.js`, Backend ที่ใช้ `FastAPI` และ Database ที่เป็น `PostgreSQL 16` โดยในส่วนของ Backend จะทำการเชื่อมต่อกับ Redis เพื่อใช้เป็น Cache\n\n## การติดตั้ง Dependency\nก่อนอื่น ให้ดำเนินการ Clone Repository ดังกล่าว แล้วทำการติดตั้ง Dependency ตามคำสั่งต่อไปนี้\n\n```bash\ngit clone https://github.com/example/app.git\ncd app && pnpm install\n```\n\n| ตัวแปร | ความหมาย |\n|---|---|\n| `DATABASE_URL` | ที่อยู่ของ Database |\n| `REDIS_URL` | ที่อยู่ของ Redis |\n\n## การ Deploy\nทั้งนี้ สามารถดำเนินการ Deploy ขึ้น Production ได้โดยใช้ Pipeline ที่ตั้งค่าไว้ใน `.github/workflows/deploy.yml` หากพบปัญหา สามารถดูรายละเอียดเพิ่มเติมได้ที่ [คู่มือแก้ปัญหา](docs/troubleshooting.md)",
+      "expected_output": "Developer Thai; code block, inline code, table, link and paths untouched; headings converted (Architecture, Deploy); essay opener and padded verbs removed.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Code block preserved exactly",
+          "type": "programmatic"
+        },
+        {
+          "text": "Inline code, paths, link and version preserved exactly",
+          "type": "programmatic"
+        },
+        {
+          "text": "Table structure preserved",
+          "type": "programmatic"
+        },
+        {
+          "text": "Heading converted: no 'สถาปัตยกรรม', has Architecture",
+          "type": "programmatic"
+        },
+        {
+          "text": "No banned AI phrases",
+          "type": "programmatic"
+        },
+        {
+          "text": "Keeps English terms (case-insensitive)",
+          "type": "programmatic"
+        },
+        {
+          "text": "Keeps all original facts and adds none",
+          "type": "manual"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "eval_name": "ambiguous-report",
+      "prompt": "ช่วยเกลาภาษาไทยของรายงานนี้ให้เป็นธรรมชาติหน่อย:\n\nรายงานสรุปการย้ายระบบ\n\nทีมงานได้ทำการย้ายระบบเก็บข้อมูลลูกค้าจากเซิร์ฟเวอร์เดิมไปยังระบบคลาวด์เรียบร้อยแล้วเมื่อวันที่ 2 พ.ย. โดยใช้เวลาดำเนินการทั้งสิ้น 3 วัน ผลการทดสอบแสดงให้เห็นว่าการโหลดหน้าเว็บเร็วขึ้นประมาณ 40% ทั้งนี้ ระบบเก่าจะถูกปิดในวันที่ 15 พ.ย. ดังนั้นผู้ที่ยังใช้งานระบบดังกล่าวอยู่ควรบันทึกข้อมูลให้เรียบร้อยก่อนถึงวันดังกล่าว ในส่วนของค่าใช้จ่าย คาดว่าจะลดลงประมาณ 15,000 บาทต่อเดือน",
+      "expected_output": "Neutral Thai with no audience cues; all dates and numbers kept; the warning to save data before 15 Nov kept; connectors that carry meaning are not deleted blindly.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Dates, numbers and amounts preserved",
+          "type": "programmatic"
+        },
+        {
+          "text": "No padded verbs (ดำเนินการ, ทำการ, ในส่วนของ)",
+          "type": "programmatic"
+        },
+        {
+          "text": "Keeps all original facts and adds none",
+          "type": "manual"
+        },
+        {
+          "text": "Uses neutral Thai and adds no jargon for an unclear audience",
+          "type": "manual"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "eval_name": "business-summary",
+      "prompt": "เขียนใหม่ให้อ่านเป็นธรรมชาติ สำหรับส่งผู้บริหารที่ไม่ใช่สาย tech:\n\nสรุปผลโครงการสำหรับผู้บริหาร: ในไตรมาสที่ผ่านมา ทีมวิศวกรรมได้ดำเนินการ Migrate ระบบชำระเงินไปยัง Microservices Architecture ซึ่งช่วยยกระดับความสามารถในการรองรับผู้ใช้อย่างทรงพลัง ปัจจุบันระบบสามารถรองรับ 5,000 ธุรกรรมต่อวินาที เพิ่มขึ้นจากเดิม 2,000 ธุรกรรมต่อวินาที และมีอัตราการล่มลดลงจาก 1.2% เหลือ 0.3% อย่างไรก็ตาม ยังมีความเสี่ยงในส่วนของ Dependency กับผู้ให้บริการภายนอก 2 ราย ซึ่งทีมจะดำเนินการแก้ไขภายในไตรมาสหน้า",
+      "expected_output": "Executive-ready Thai; figures kept; hype removed; jargon replaced or glossed; no invented consequences.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Figures preserved",
+          "type": "programmatic"
+        },
+        {
+          "text": "No hype words or padded verbs",
+          "type": "programmatic"
+        },
+        {
+          "text": "Keeps all original facts and adds none",
+          "type": "manual"
+        },
+        {
+          "text": "Jargon suitable for non-technical executives",
+          "type": "manual"
+        }
       ]
     }
   ]
