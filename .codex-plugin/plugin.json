@@ -1,0 +1,32 @@
+{
+  "name": "agent-skills",
+  "version": "0.1.0",
+  "description": "A collection of skills for coding agents. Currently: thai-natural-writing.",
+  "author": {
+    "name": "Piya Miang-lae"
+  },
+  "repository": "https://github.com/Piya-Boy/piya-skill",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "agents",
+    "thai",
+    "writing",
+    "documentation"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Skills",
+    "shortDescription": "Skills for coding agents",
+    "longDescription": "A growing collection of skills for coding agents.\n\nthai-natural-writing: reviews and rewrites Thai text (often AI-generated) so it reads like a person wrote it. Picks wording by audience, keeps technical terms Thai practitioners already say in English (Architecture, Backend, API, Deploy), cuts padded verbs and AI-style phrasing, and never changes code, names, URLs, or meaning.",
+    "developerName": "Piya Miang-lae",
+    "category": "Productivity",
+    "capabilities": [
+      "Edit",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $thai-natural-writing to make this Thai sound natural: (Thai text)"
+    ]
+  }
+}

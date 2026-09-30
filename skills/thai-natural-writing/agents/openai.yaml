@@ -1,0 +1,4 @@
+interface:
+  display_name: "/thai-natural-writing"
+  short_description: "Make Thai text read like a person wrote it, with wording matched to the audience."
+  default_prompt: "Use $thai-natural-writing to rewrite this Thai text so it sounds natural for its audience, keeping technical terms that developers already say in English."

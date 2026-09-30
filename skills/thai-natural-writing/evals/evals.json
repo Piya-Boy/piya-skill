@@ -1,0 +1,47 @@
+{
+  "skill_name": "thai-natural-writing",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "dev-readme",
+      "prompt": "ช่วยเกลาภาษาไทยของส่วนนี้ใน README ให้อ่านเป็นธรรมชาติ คนอ่านคือ developer ในทีม:\n\n## ภาพรวมสถาปัตยกรรม\nในยุคที่ระบบมีความซับซ้อนมากขึ้น ปฏิเสธไม่ได้ว่าสถาปัตยกรรมที่ดีเป็นสิ่งสำคัญ ในส่วนของ Backend เราได้ทำการใช้ `Express` เป็นเฟรมเวิร์กหลัก และดำเนินการตั้งค่า Middleware สำหรับการยืนยันตัวตนด้วย JWT ทั้งนี้ ในส่วนของ Frontend จะทำการเรียก API ที่ `https://api.example.com/v2/users` ผ่านทาง Endpoint ดังกล่าว ไม่เพียงแต่จะรวดเร็ว แต่ยังมีความปลอดภัยอีกด้วย\n\nหากต้องการดำเนินการ Deploy ให้รันคำสั่ง `npm run build && npm run deploy`",
+      "expected_output": "Natural developer Thai; Architecture/Backend/Frontend/Middleware/Endpoint/Deploy kept in English; code, URL, command unchanged; no padded verbs or essay opener.",
+      "files": [],
+      "assertions": [
+        {"text": "Preserves `Express`, the URL https://api.example.com/v2/users and the command `npm run build && npm run deploy` exactly", "type": "programmatic"},
+        {"text": "Does not translate Backend, Frontend, Middleware, Endpoint, Deploy, API into Thai", "type": "programmatic"},
+        {"text": "Does not use 'สถาปัตยกรรม' (keeps Architecture)", "type": "programmatic"},
+        {"text": "Contains none of: ดำเนินการ, ทำการ, ในส่วนของ, ปฏิเสธไม่ได้ว่า, ในยุคที่, ไม่เพียงแต่, ดังกล่าว, ทั้งนี้", "type": "programmatic"},
+        {"text": "Keeps all original facts (Express, JWT auth middleware, Frontend calls the API, fast and secure, deploy command) and adds none", "type": "manual"}
+      ]
+    },
+    {
+      "id": 1,
+      "eval_name": "general-email",
+      "prompt": "เขียนข้อความนี้ใหม่ให้เป็นภาษาไทยที่เป็นธรรมชาติ สำหรับส่งให้ลูกค้าทั่วไปที่ไม่ใช่สายเทคนิค (ลงในอีเมลแจ้งอัปเดตแอป):\n\nในยุคดิจิทัล เราได้ทำการปรับปรุงสถาปัตยกรรมของแอปพลิเคชัน โดยดำเนินการย้ายข้อมูลไปยัง Database ใหม่ เมื่อผู้ใช้ส่ง Request ไปยัง Endpoint ระบบจะทำการดึงข้อมูลจาก Cache ก่อน ซึ่งช่วยยกระดับประสบการณ์ของผู้ใช้อย่างแท้จริง ทั้งนี้ ท่านไม่จำเป็นต้องดำเนินการใด ๆ",
+      "expected_output": "Plain Thai for non-technical customers; jargon replaced or glossed; hype and padded verbs removed; still says users need to do nothing.",
+      "files": [],
+      "assertions": [
+        {"text": "Does not contain the bare jargon words Request, Endpoint, Database (uses plain Thai or glossed terms)", "type": "programmatic"},
+        {"text": "Contains none of: ทำการ, ยกระดับ, อย่างแท้จริง, ในยุคดิจิทัล, ทั้งนี้", "type": "programmatic"},
+        {"text": "Still tells the customer they do not need to take any action", "type": "manual"},
+        {"text": "Keeps all original facts (architecture improved, data moved to new database, cache is checked first, better user experience) and adds none", "type": "manual"},
+        {"text": "Reads as a natural customer email, not a stiff or AI-sounding one", "type": "manual"}
+      ]
+    },
+    {
+      "id": 2,
+      "eval_name": "dev-pr",
+      "prompt": "ปรับภาษาไทยของ PR description นี้ (AI เขียน) ให้เป็นธรรมชาติสำหรับทีม dev:\n\nfeat: เพิ่มระบบ Rate Limiting\n\n## สรุป\nในการนี้ ได้ทำการเพิ่มความสามารถในการจำกัดจำนวน Request โดยดำเนินการ Implement Middleware ใหม่ที่ `src/middleware/rateLimit.ts` ซึ่งใช้ Redis เป็น Queue สำหรับเก็บข้อมูลดังกล่าว\n- ทำการแก้ไข Bug ที่ทำให้ Cache ไม่ถูก Invalidate\n- ดำเนินการอัปเดต Dependency `ioredis` เป็นเวอร์ชัน 5.3.2\n\nทั้งนี้ สามารถทดสอบได้ด้วยคำสั่ง `npm test -- rateLimit`",
+      "expected_output": "Concise dev-style Thai; feat: prefix, file path, version, command preserved; English terms kept; padded verbs removed.",
+      "files": [],
+      "assertions": [
+        {"text": "Preserves the 'feat:' prefix, `src/middleware/rateLimit.ts`, `ioredis`, 5.3.2 and `npm test -- rateLimit` exactly", "type": "programmatic"},
+        {"text": "Keeps Middleware, Bug, Cache, Dependency, Request, Queue, Redis in English", "type": "programmatic"},
+        {"text": "Contains none of: ดำเนินการ, ทำการ, ในการนี้, ทั้งนี้, ดังกล่าว", "type": "programmatic"},
+        {"text": "Keeps the markdown structure (heading and bullet list)", "type": "programmatic"},
+        {"text": "Keeps all original facts and adds none", "type": "manual"}
+      ]
+    }
+  ]
+}
