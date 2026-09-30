@@ -43,7 +43,11 @@ Mixed signals: pick the audience that reads the text, not the one who wrote it. 
 | **Documentation** | Clear, consistent, technically exact. Use one term per concept for the whole document (do not alternate "Endpoint" and "จุดเชื่อมต่อ"). |
 
 ### Using a term with general readers
-Add a short gloss the first time, then use the term freely: "Architecture หรือโครงสร้างโดยรวมของระบบ ... ต่อมา Architecture นี้ ..."
+Prefer plain Thai first. Keep an English term only when the reader will meet it again (in this text or in their work) or when no plain wording fits. When you keep one, lead with the Thai meaning and put the term in brackets, or gloss it inline, the first time: "โครงสร้างแบบแยกส่วน (Microservices)", "Architecture หรือโครงสร้างโดยรวมของระบบ". Then use one form consistently.
+
+Avoid a bare term in brackets with no meaning attached, e.g. "ผู้ให้บริการภายนอก 2 ราย (Dependency)": it adds jargon without helping the reader. Either drop it or make the Thai carry the meaning.
+
+A gloss explains a word; it must not add facts, causes, or consequences that the source does not state.
 
 ## Keep in English (Developer / Documentation)
 
@@ -101,7 +105,11 @@ The user will paste this text elsewhere, so altering these breaks things:
 
 ## Output
 
-Default: return **only the final text**, ready to copy. If the user asks, or if an ambiguous audience forced an important call, append a short note: the assumed audience plus 2-5 key changes. If the source is a file in a project, edit it in place and report briefly.
+Return the final text on its own, ready to copy: put it in a fenced code block (or a block quote for short text), with nothing inside that block except the deliverable. Never mix notes into the text itself or append them after a separator, because the user copies the whole thing.
+
+Outside the block, add a short note only when useful: when the user asks, when the audience was ambiguous and you had to assume one, or when you added a gloss or cut a sentence. Keep it to the assumed audience plus 2-5 key changes.
+
+If the source is a file in a project, edit it in place and report briefly.
 
 If the text is already good, change as little as possible. Do not rewrite just to look busy.
 
