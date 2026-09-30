@@ -1,0 +1,30 @@
+.codex-plugin/plugin.json
+  h_f820d1ed52287e 1-32
+.gitignore
+  h_f820d1ed52287e 1
+LICENSE
+  h_f820d1ed52287e 1-21
+README.md
+  h_f820d1ed52287e 1-90
+skills/thai-natural-writing/SKILL.md
+  h_f820d1ed52287e 1-122
+skills/thai-natural-writing/agents/openai.yaml
+  h_f820d1ed52287e 1-4
+skills/thai-natural-writing/evals/evals.json
+  h_f820d1ed52287e 1-47
+skills/thai-natural-writing/references/ai-patterns.md
+  h_f820d1ed52287e 1-66
+skills/thai-natural-writing/references/technical-terms.md
+  h_f820d1ed52287e 1-45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "69f5113ea9e0d8d3a4c867e90b222a1f7f35a9ee",
+  "prompts": {},
+  "humans": {
+    "h_f820d1ed52287e": {
+      "author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
