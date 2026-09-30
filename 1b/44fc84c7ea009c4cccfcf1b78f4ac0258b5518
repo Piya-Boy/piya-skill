@@ -1,0 +1,19 @@
+skills/thai-natural-writing/evals/evals.json
+  s_d8bfe202318d9f::t_c45d1ceae9fb6f 11-30,40-59,69-175,179
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1b44fc84c7ea009c4cccfcf1b78f4ac0258b5518",
+  "prompts": {},
+  "sessions": {
+    "s_d8bfe202318d9f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9c295e26-3ef6-4a69-94ce-44e9b7763969",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
