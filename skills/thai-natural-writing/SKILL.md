@@ -96,7 +96,7 @@ Match the source's register: formal (รายงาน, เอกสารท�
 The user will paste this text elsewhere, so altering these breaks things:
 - Do not add information that is not in the source. Do not drop important information. Do not change technical meaning.
 - Do not edit or translate: code, code blocks, inline code, library/framework/API/function/variable names, product names, CLI commands, URLs, file names and paths, numbers and versions.
-- Keep Markdown structure (headings, lists, tables, links) unless the user asks to restructure.
+- Keep Markdown structure (heading levels, list and table layout, link targets) unless the user asks to restructure. The wording inside headings, list items, table cells, and link text is ordinary text: check it like the body. "## ภาพรวมสถาปัตยกรรม" becomes "## ภาพรวม Architecture" for developers.
 - Commit messages: keep the Conventional Commits prefix (`feat:`, `fix:`) and existing format.
 
 ## Output
