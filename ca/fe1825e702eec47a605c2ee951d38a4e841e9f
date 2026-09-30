@@ -1,0 +1,20 @@
+skills/thai-natural-writing/SKILL.md
+  s_d8bfe202318d9f::t_be3d6573de9d09 108-112
+  s_d8bfe202318d9f::t_edc06143994692 46-50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cafe1825e702eec47a605c2ee951d38a4e841e9f",
+  "prompts": {},
+  "sessions": {
+    "s_d8bfe202318d9f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9c295e26-3ef6-4a69-94ce-44e9b7763969",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
