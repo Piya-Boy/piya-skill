@@ -26,6 +26,32 @@ npx skills add Piya-Boy/piya-skill --skill thai-natural-writing --global --yes
 
 Manual install for Claude Code: copy the skill folder (for example `skills/thai-natural-writing/`) into `~/.claude/skills/` (all projects) or `<project>/.claude/skills/` (one project).
 
+## Update
+
+To update an existing installation to **v2.0.0**:
+
+Paste this into Claude Code, Codex, or Cursor:
+
+```text
+Update the /thai-natural-writing skill from https://github.com/Piya-Boy/piya-skill
+```
+
+Or re-run `npx`:
+
+```sh
+npx skills add Piya-Boy/piya-skill --skill thai-natural-writing --global --yes
+```
+
+For manual installs, pull the latest repo or overwrite `SKILL.md`:
+
+```sh
+# PowerShell (Windows)
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Piya-Boy/piya-skill/main/skills/thai-natural-writing/SKILL.md" -OutFile "$HOME\.claude\skills\thai-natural-writing\SKILL.md"
+
+# Bash (macOS/Linux)
+curl -fsSL "https://raw.githubusercontent.com/Piya-Boy/piya-skill/main/skills/thai-natural-writing/SKILL.md" -o ~/.claude/skills/thai-natural-writing/SKILL.md
+```
+
 ## Use
 
 ```text
